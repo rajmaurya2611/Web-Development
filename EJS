@@ -1,0 +1,39 @@
+//INDEX.JS
+
+import express from "express";
+
+const app = express();
+const port =3000;
+
+app.get("/", (req, res) =>{
+    var type= "a weekday";
+    var ad="work hard";
+
+    const d = new Date();
+    let day = d.getDay();
+
+    if(day===0||day===6){
+        type="the weekend";
+        ad="enjoy";
+    }
+
+    res.render("index.ejs",{dayType:type, advice:ad});
+});
+
+app.listen(port,()=> {
+    console.log(`Server running on ${port}`);
+});
+
+//INDEX.EJS
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS</title>
+</head>
+<body>
+    <h1> Hey its <%= dayType  %>,<%= advice %>! </h1>
+</body>
+</html>
