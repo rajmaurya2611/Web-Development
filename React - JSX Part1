@@ -1,0 +1,23 @@
+//index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JSX</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="../src/index.js" type="text/javascript"></script>
+  </body>
+</html>
+
+
+//index.js
+
+import React from "react";
+import ReactDom from "react-dom";
+
+ReactDom.render(<h1>Raj has Arrived</h1>, document.getElementById("root"));
+
