@@ -1,0 +1,33 @@
+// index.js
+//Create a react app from scratch.
+import React from "react";
+import ReactDom from "react-dom";
+
+//It should display a h1 heading.
+ReactDom.render(<div>
+  <h1>My Favourite Food</h1>
+  <ul>
+    <li>Bacon</li>
+    <li>Jamon</li>
+    <li>Noodles</li>
+  </ul>
+  </div>,
+  document.getElementById("root"));
+//It should display an unordered list (bullet points).
+//It should contain 3 list elements.
+
+//index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JSX</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="../src/index.js" type="text/javascript"></script>
+  </body>
+</html>
+
