@@ -1,0 +1,25 @@
+//usestate practice clock
+
+import React, {useState} from "react";
+
+function App() {
+  let time = new Date().toLocaleTimeString();
+  console.log(time);
+
+ const [timeshow, settime]= useState(time);
+
+ function newTime(){
+   settime(new Date().toLocaleTimeString());
+
+ }
+ setInterval(newTime, 1000);
+     
+  return (
+    <div className="container">
+      <h1>{timeshow}</h1>
+      <button onClick={newTime}>Get Time</button>
+    </div>
+  );
+}
+
+export default App;
