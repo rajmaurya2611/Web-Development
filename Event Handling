@@ -1,0 +1,27 @@
+import React, { useState } from "react";
+
+function App() {
+  const [mouse, setmouse] = useState(false);
+  //const [ismouse, setismouse] = useState(true);
+  function Style1() {
+    setmouse(true);
+  }
+  function Style2() {
+    setmouse(false);
+  }
+  return (
+    <div className="container">
+      <h1>Hello</h1>
+      <input type="text" placeholder="What's your name?" />
+      <button
+        style={{ backgroundColor: mouse ? "black" : "white" }}
+        onMouseOver={Style1}
+        onMouseOut={Style2}
+      >
+        Submit
+      </button>
+    </div>
+  );
+}
+
+export default App;
